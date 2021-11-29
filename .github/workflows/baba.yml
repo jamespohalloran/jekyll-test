@@ -1,0 +1,10 @@
+name: Baba
+
+on: [push, workflow_dispatch]
+
+jobs:
+  baba:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo babaorum
