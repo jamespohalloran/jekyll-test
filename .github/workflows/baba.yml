@@ -1,15 +1,16 @@
 name: Baba
 
-on: [push, workflow_dispatch]
-  inputs:
-    name:
-      description: 'Person to greet'
-      required: true
-      default: 'Mona the Octocat'
-    home:
-      description: 'location'
-      required: false
-      default: 'The Octoverse'
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
 
 jobs:
   baba:
