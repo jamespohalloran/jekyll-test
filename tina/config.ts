@@ -12,7 +12,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "jekyll-test",
+    publicFolder: "",
   },
   media: {
     tina: {
