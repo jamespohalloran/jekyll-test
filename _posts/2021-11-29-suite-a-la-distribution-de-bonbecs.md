@@ -1,5 +1,7 @@
 ---
-description: La fuite en avant
+layout: post
+date:   2019-12-28 07:49:28 +0100
+title: La fuite en avant
 cover: ../.gitbook/assets/bonbecs.jpeg
 coverY: 0
 ---
