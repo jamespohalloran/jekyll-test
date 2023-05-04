@@ -41,10 +41,10 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - run: npm install
       - name: Build TinaCMS
-          env:
-            TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-            TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-          run: npm run tinacms build
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: npm run tinacms build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
