@@ -12,7 +12,7 @@ export default defineConfig({
   token: TOKEN, // Get this from tina.io
 
   build: {
-    outputFolder: "admin",
+    outputFolder: "jekyll-test/admin",
     publicFolder: "/",
   },
   media: {
