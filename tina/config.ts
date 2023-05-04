@@ -12,8 +12,8 @@ export default defineConfig({
   token: TOKEN, // Get this from tina.io
 
   build: {
-    outputFolder: "jekyll-test/admin",
-    publicFolder: "/",
+    outputFolder: "admin",
+    publicFolder: "/jekyll-test",
   },
   media: {
     tina: {
