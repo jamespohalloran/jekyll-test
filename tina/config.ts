@@ -1,10 +1,10 @@
 import { defineConfig } from "tinacms";
-import moment from 'moment';
+import moment from "moment";
 
 // Your hosting provider likely exposes this as an environment variable
 const BRANCH = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
-const CLIENT_ID = String(process.env.TINA_CLIENT_ID ?? '');
-const TOKEN = String(process.env.TINA_TOKEN ?? '');
+const CLIENT_ID = String(process.env.TINA_CLIENT_ID ?? "");
+const TOKEN = String(process.env.TINA_TOKEN ?? "");
 
 export default defineConfig({
   branch: BRANCH,
@@ -14,6 +14,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "/",
+    subPath: "jekyll-test",
   },
   media: {
     tina: {
@@ -29,14 +30,20 @@ export default defineConfig({
         path: "_posts",
         ui: {
           defaultItem: {
-            date: moment(new Date()).format('YYYY-MM-DD'),
+            date: moment(new Date()).format("YYYY-MM-DD"),
             layout: "post",
           },
           filename: {
             readOnly: true,
-            slugify: values => {
-              return `${values?.date?.substring(0, 10) ||
-                'xxxx'}-${values?.title?.toLowerCase().replace(/[^\w\s]/gi, '').replace(/ /g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, "")}`
+            slugify: (values) => {
+              return `${
+                values?.date?.substring(0, 10) || "xxxx"
+              }-${values?.title
+                ?.toLowerCase()
+                .replace(/[^\w\s]/gi, "")
+                .replace(/ /g, "-")
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")}`;
             },
           },
         },
@@ -61,11 +68,11 @@ export default defineConfig({
             isBody: true,
           },
           {
-            label: 'Layout',
-            name: 'layout',
-            type: 'string',
+            label: "Layout",
+            name: "layout",
+            type: "string",
             required: true,
-            ui: { component: 'hidden' },
+            ui: { component: "hidden" },
           },
         ],
       },
