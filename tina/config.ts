@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "/",
-    // subPath: "jekyll-test",
+    basePath: "jekyll-test",
   },
   media: {
     tina: {
